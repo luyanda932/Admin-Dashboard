@@ -1,121 +1,150 @@
 html {
-    --yellow: #FFCE44;
-    --yellow2: #FBC02D;
-    --blue: #0085CA;
-    --light-gray: #e4edf3;
-    --white: #ffffff;
+  --yellow: #ffce44;
+  --yellow2: #fbc02d;
+  --blue: #0085ca;
+  --light-gray: #e4edf3;
+  --white: #ffffff;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body { height: 100%; width: 100%; }
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
 .container {
-    display: grid;
-    height: 100%;
-    margin-left: 150px;
-    margin-right: 150px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+  display: grid;
+  height: 100%;
+  margin-left: 150px;
+  margin-right: 150px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 
 .dashboard {
-    background-color: var(--blue);
-    grid-area: 1 / 1 / 6 / 2;
-    color: var(--white);
+  background-color: var(--blue);
+  grid-area: 1 / 1 / 6 / 2;
+  color: var(--white);
 }
 
 .dashboardHeader {
-    padding-top: 10px;
-    padding-left: 10px;
-    font-size: 19px;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 19px;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
 .dashboardHeader h3 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .dashboardHeader svg {
-    width: 40px;
-    height: 40px;
-    fill: var(--white);
-    margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  fill: var(--white);
+  margin-right: 8px;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 ul svg {
-    width: 18px;
-    height: 18px;
-    fill: var(--white);
-    margin-right: 17px;
+  width: 18px;
+  height: 18px;
+  fill: var(--white);
+  margin-right: 17px;
 }
 
 svg {
-    vertical-align: middle;
-    margin-bottom: 2.2px;
+  vertical-align: middle;
+  margin-bottom: 2.2px;
 }
 
 li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 li a {
-    color: var(--white);
-    text-decoration: none;
+  color: var(--white);
+  text-decoration: none;
 }
 
-.nav-links-1, .nav-links-2 {
-    padding-left: 20px;
-    font-size: 18px;
-    font-family: Calibri, sans-serif;
-    font-weight: 500;
+.nav-links-1,
+.nav-links-2 {
+  padding-left: 20px;
+  font-size: 18px;
+  font-family: Calibri, sans-serif;
+  font-weight: 500;
 }
 
 .nav-links-1 {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .nav-links-2 {
-    margin-top: 49px;
+  margin-top: 49px;
 }
 
 .header {
-    background-color: var(--white);
-    grid-area: 1 / 2 / 2 / 6;
-    padding-left: 30px;
+  background-color: var(--white);
+  grid-area: 1 / 2 / 2 / 6;
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: repeat(2, 1fr)
 }
 
 .searchBar {
-    padding-top: 18px;
+  padding-top: 18px;
 }
 
 .searchBar svg {
-    width: 16px;
-    height: 16px;
-    margin-top: 2px;
-    margin-right: 14px;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  margin-right: 14px;
 }
 
 .searchBar input {
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    font-size: 12px;
-    padding: 10px 0px 10px 18px;
-    width: 450px;
-    height: 24px;
-    background-color: var(--light-gray);
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 12px;
+  padding: 10px 0px 10px 18px;
+  width: 450px;
+  height: 24px;
+  background-color: var(--light-gray);
+}
+
+.usernameSection {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.usernameSection p {
+    font-size: 14px;
+}
+
+.usernameSection img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.userName {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .content {
-    background-color: var(--light-gray);
-    grid-area: 2 / 2 / 6 / 6;
+  background-color: var(--light-gray);
+  grid-area: 2 / 2 / 6 / 6;
 }
