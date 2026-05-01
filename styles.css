@@ -1,7 +1,7 @@
 html {
   --yellow: #ffce44;
   --yellow2: #fbc02d;
-  --blue: #0085ca;
+  --blue: #0097ddf8;
   --light-gray: #e4edf3;
   --white: #ffffff;
 }
@@ -10,6 +10,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 html,
@@ -21,15 +22,15 @@ body {
 .container {
   display: grid;
   height: 100%;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 130px;
+  margin-right: 130px;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 18% 82%;
 }
 
 .dashboard {
   background-color: var(--blue);
-  grid-area: 1 / 1 / 6 / 2;
+  grid-area: 1 / 1 / 3 / 2;
   color: var(--white);
 }
 
@@ -37,7 +38,6 @@ body {
   padding-top: 10px;
   padding-left: 10px;
   font-size: 19px;
-  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
 .dashboardHeader h3 {
@@ -79,9 +79,9 @@ li a {
 .nav-links-1,
 .nav-links-2 {
   padding-left: 20px;
-  font-size: 18px;
-  font-family: Calibri, sans-serif;
-  font-weight: 500;
+  font-size: 15px;
+  font-family: sans-serif, Helvetica, Arial;
+  font-weight: 600;
 }
 
 .nav-links-1 {
@@ -96,9 +96,13 @@ li a {
   background-color: var(--white);
   grid-area: 1 / 2 / 2 / 6;
   padding-left: 30px;
+  padding-bottom: 5px;
   display: grid;
   grid-template-columns: 65% 35%;
-  grid-template-rows: repeat(2, 1fr)
+  grid-template-rows: repeat(2, 1fr);  
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  z-index: 2;
 }
 
 .searchBar {
@@ -123,14 +127,41 @@ li a {
   background-color: var(--light-gray);
 }
 
+.userAccountSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    padding-left: 30px;
+}
+
+.userAccountSection svg {
+  width: 18px;
+  height: 18px;
+}
+
+.userAccountSection img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
+.userAccountSection :nth-child(2) {
+  padding-top: 4px;
+}
+
+.userAccountSection :nth-child(3) {
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 2.8px;
+}
+
 .usernameSection {
     display: flex;
     flex-direction: row;
-    gap: 20px;
-}
-
-.usernameSection p {
-    font-size: 14px;
+    gap: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
 }
 
 .usernameSection img {
@@ -139,12 +170,85 @@ li a {
   border-radius: 50%;
 }
 
-.userName {
-  font-size: 20px;
-  font-weight: 500;
+.greeting {
+    font-size: 12px;
+    padding-top: 6px;
+    padding-bottom: 3px;
+}
+
+.nameAndUsername {
+  font-size: 14px;
+  font-weight: 520;
+  padding-top: 5px;
+  margin-top: -7px;
+}
+
+.userActions {
+  display: flex;
+  flex-direction: row;
+  padding-top: 14px;
+  gap: 15px;
+}
+
+.userActions button {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 12px;
+  width: 75px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--blue);
 }
 
 .content {
   background-color: var(--light-gray);
-  grid-area: 2 / 2 / 6 / 6;
+  grid-area: 2 / 2 / 3 / 6;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 50% 50%;
+}
+
+.projects {
+  grid-area: 1 / 1 / 4 / 2;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 8% 92%;
+  padding-bottom: 20px;
+  padding-right: 0px;
+  margin-left: 20px;
+}
+
+.projectsBody {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.projectsBody div {
+  flex: 0 1 280px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.projectsBody > div > span {
+  height: 100%;
+}
+
+.projectsHeading, .announcementsHeading {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.announcements {
+  display: grid;
+  grid-template-rows: 18% 82%;
+  padding-right: 20px;
+  margin-left: -8px;
+}
+
+.announcementsBody {
+  border-radius: 8px;
+  background-color: var(--white);
+  padding-right: 20px;
 }
