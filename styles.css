@@ -4,6 +4,7 @@ html {
   --blue: #0097ddf8;
   --light-gray: #e4edf3;
   --white: #ffffff;
+
 }
 
 * {
@@ -150,9 +151,8 @@ li a {
   padding-top: 4px;
 }
 
-.userAccountSection :nth-child(3) {
+.userAccountSection h2 {
   font-size: 14px;
-  font-weight: 600;
   padding-bottom: 2.8px;
 }
 
@@ -178,7 +178,6 @@ li a {
 
 .nameAndUsername {
   font-size: 14px;
-  font-weight: 520;
   padding-top: 5px;
   margin-top: -7px;
 }
@@ -224,15 +223,45 @@ li a {
   margin-left: 20px;
 }
 
-.projectsBody div {
+.projectDiv {
   flex: 0 1 280px;
   background-color: var(--white);
-  border-radius: 8px;
+  border-radius: 5px;
+  position: relative;
+  padding-left: 10px;
+  border-left: 5px solid var(--yellow2);
 }
 
-.projectsBody > div > span {
-  height: 100%;
+.projectDiv h2 {
+  padding-top: 18px;
+  font-size: 12px;
+  font-family: Helvetica;
 }
+
+.projectDiv p {
+  line-spacing: 
+  color: grey;
+  font-size: 11px;
+  font-family: Helvetica;
+}
+
+.actionIcons svg{
+  width: 17px;
+  height: 17px;
+  fill: #000000cc;  
+  stroke: #20202017;   
+  stroke-width: 1px;
+}
+
+.actionIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  bottom: 10%;
+  right: 7%;
+}
+
 
 .projectsHeading, .announcementsHeading, .trendingHeading {
   font-size: 15px;
@@ -251,6 +280,14 @@ li a {
   margin-left: -8px;
 }
 
+.announcementsBody h2 {
+  font-size: 12px;
+}
+
+.announcementsBody p {
+  font-size: 9px;
+}
+
 .trendingHeading {
   grid-area: 3 / 2 / 4 / 3;
 }
@@ -261,5 +298,5 @@ li a {
   background-color: var(--white);
   margin-right: 14px;
   margin-left: -8px;
-  height: 90%;
+  height: 94%;
 }
